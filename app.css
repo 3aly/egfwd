@@ -1,0 +1,138 @@
+body{
+
+    background: #f2ccfc;
+    font-family: "Nunito";
+}
+
+#navmain{
+
+    font-size: 1.5rem;
+    font-weight: 100;
+}
+#navmain .nav-link{
+
+    color:white;
+
+       
+}
+
+#navmain .nav-link:hover{
+
+    color:#ea1c2c;
+
+       
+}
+
+
+.active{
+
+    color:white;
+    background-color: #d53e4b;
+    border-radius: 5px;
+    padding: 2px;
+    
+    transition: all 0.5s;
+}
+
+
+#navmain .navbar-brand
+{
+    color:#ea1c2c;
+    
+
+
+}
+
+#headingGroup span{
+
+    color: #ea1c2c;
+
+}
+
+#headingGroup h1{
+
+    color:white;
+    font-size: 4rem;
+    font-weight: 100;
+}
+
+h2{
+
+    color:white;
+    font-size: 2rem;
+    font-weight: 100;
+}
+footer{
+    display: flex;
+    color:white;
+    font-size: 3rem;
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+   
+    padding: 5px;
+    background-color: #dec0de;
+}
+footer span{
+
+    color: #ea1c2c;
+}
+@media (max-width: 1300px) {
+    #headingGroup h1{
+
+        font-size: 3rem;
+    }
+}
+p{
+
+    color:rgb(250, 162, 162);
+    font-weight: 100;
+    font-size: 1.25rem;
+    line-height: 2;
+    
+
+}
+
+#middle h1{
+
+    color:#ea1c2c;
+    font-weight: 100;
+    font-size: 2.5rem;
+    
+
+}
+    
+#last{
+
+    color:rgb(250, 162, 162);
+    font-weight: 100;
+    font-size: 1.25rem;
+    line-height: 2;
+    
+
+}
+
+#last h1{
+
+    color:#ea1c2c;
+    font-weight: 100;
+    font-size: 2.5rem;
+    
+
+}
+
+.scrolled{
+
+    background-color: rgb(222,192,222);
+    transition: background-color 0.5s ease-in-out;
+
+}
+    
+
+section{
+
+   
+    margin-bottom: 100px ;
+}
+
+

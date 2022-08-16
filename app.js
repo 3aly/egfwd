@@ -27,8 +27,8 @@ const navBarList=document.getElementById('navbar__list'); //get the navbar list
 buildNav(); //build the navbar
 
 
-const navs=document.querySelectorAll('nav .container ul li'); //get all the li elements in the navbar after its built
-const navLinks=document.querySelectorAll('nav .container ul li a'); //get all links in navbar
+const navs=document.querySelectorAll('ul li'); //get all the li elements in the navbar after its built
+const navLinks=document.querySelectorAll('ul li a'); //get all links in navbar
 
 navHighlighter();
 scrollToSection();
@@ -41,9 +41,11 @@ function buildNav(){
     sections.forEach(section=>{
 
         const newList = document.createElement('li'); //create a new li element
-        newList.className=section.getAttribute('id'); //set the class of the new li element to the id of the section
+        newList.className=section.getAttribute('id')+' nav-item'; //set the class of the new li element to the id of the section
         const newLink = document.createElement('a'); //create a new link element
+        newLink.className='nav-link'; //set the class of the new link element to nav-link
         newLink.setAttribute('href', '#'+section.getAttribute('id')); //set the href of the new link element to the id of the section
+        
         newLink.textContent=section.getAttribute('id'); //set the text content of the new link element to the id of the section
         newList.appendChild(newLink); //append the new link element to the new li element
         navBarList.appendChild(newList); //append the new li element to the navbar list
@@ -90,9 +92,13 @@ function navHighlighter(){
       
               const secttionTop = section.offsetTop; //calculate the offset form each section to the top of the window
               const sectionHeight=section.clientHeight; //calculate the height of each section
-              if(pageYOffset>=secttionTop-sectionHeight/2){
-                  current=section.getAttribute('id'); //get the id of the current section
+              if(pageYOffset>secttionTop-sectionHeight/2){
+                current=section.getAttribute('id'); //get the id of the current section
+            }
+              if(pageYOffset===0){
+                  current='Home'; //get the id of the current section
               }
+            
           }
           console.log(current);
           navs.forEach(li=>{ //loop through all the li elements in the navbar
