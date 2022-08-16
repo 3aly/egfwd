@@ -23,6 +23,11 @@
  * 
 */
 
+const sections= document.querySelectorAll('section');
+const navs=document.querySelectorAll('nav .container ul li');
+const navLinks=document.querySelectorAll('nav .container ul li a');
+
+
 
 /**
  * End Global Variables
@@ -57,21 +62,20 @@
 
 // Scroll to section on link click
 
+navLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault(); // prevent default behaviour of the link
+        const target=e.target.getAttribute('href'); // get the href of the link
+        const targetSection=document.querySelector(target); // get the section that the link points to
+        targetSection.scrollIntoView({behavior:'smooth'}); // scroll to the section
+    }
+    )
+ 
+
+
+});
+
 // Set sections as active
-function clicknav(event){
-
-    console.log(event.target.textContent);
-
-
-  }
-
-
-
-const sections= document.querySelectorAll('section');
-console.log(sections);
-const navs=document.querySelectorAll('nav ul li');
-console.log(navs);
-
 window.addEventListener('scroll',()=> {
 
   let current="";
@@ -81,21 +85,20 @@ window.addEventListener('scroll',()=> {
     for(let section of sections){
 
         const secttionTop = section.offsetTop; //calculate the offset form each section to the top of the window
-        const sectionHeight=section.clientHeight; //calculate the hieght of each section
-        if(pageYOffset>=(secttionTop-sectionHeight)){
-            current=section.getAttribute('id');
+        const sectionHeight=section.clientHeight; //calculate the height of each section
+        if(pageYOffset>secttionTop-sectionHeight/2){
+            current=section.getAttribute('id'); //get the id of the current section
         }
     }
     console.log(current);
     navs.forEach(li=>{
 
-    li.classList.remove('active');
-    console.log(navs);
-    if(li.classList.contains('current')){
-
-        li.classList.add("active");
-        console.log(navs);
-//d
+    li.classList.remove('active'); //remove the active class from all the li elements
+  
+    if(li.classList.contains(current)){
+      
+      li.classList.add('active'); //add the active class to the current li element
+    
 
     }
 

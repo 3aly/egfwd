@@ -265,3 +265,16 @@ nav .container .active a{
     display: block;
 
 }
+nav .container :hover{
+
+    background-color: #28445c;
+    transition: 0.5 ease background-color;
+
+}
+nav .container a:hover{
+
+    color: white;
+    display: block;
+
+}
+
