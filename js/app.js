@@ -110,7 +110,10 @@ function navHighlighter(){
             for(let section of sections){ 
                 
             //calculate the offset form each section to the top of the window
+
             const secttionTop = section.offsetTop; 
+            const sectionHeight = section.offsetHeight;
+
             
             //if the page is scrolled to the top of the HOME section, set the current section to HOME
             if((sections[0].offsetTop)/2>pageYOffset>0){

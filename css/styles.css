@@ -133,6 +133,42 @@ section{
 
    
     margin-bottom: 100px ;
+    transition: all 0.5s ;
 }
 
+.active-section {
+    
+   
+    
+    padding: 0 1em 0 1em;
+    margin: 2% 0 2% 0;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: all 0.1s;
+    
+    
+   
+
+  }
+ 
+.active-home{
+    margin: 10%;
+    
+    transition: all 0.5s;
+}
+.active-home span{
+    margin: 5%;
+    transform: rotate(180deg);
+    display: inline-block;
+    transition: all 0.5s;
+    
+}
+#Home{
+    
+    transition: all 0.5s;
+}
+#Home span{
+    
+    transition: all 0.5s;
+    
+}
 
