@@ -163,12 +163,12 @@ section{
   }
  
 .active-home{
-    margin: 10%;
+    margin: 9%;
     
     transition: all 0.5s;
 }
 .active-home span{
-    margin: 5%;
+    margin: 4%;
     transform: rotate(180deg);
     display: inline-block;
     transition: all 0.5s;
